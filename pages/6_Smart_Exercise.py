@@ -3,7 +3,7 @@ import openai
 from difflib import SequenceMatcher
 
 # Initialize OpenAI API key
-openai.api_key = "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"
+openai.api_key = "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"
 
 # Initialize Streamlit app
 st.title("Smart Exercise Bank with Auto-Grading and Feedback")
