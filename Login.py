@@ -1,12 +1,12 @@
 import streamlit as st
 
 def main_page():
-    st.title("Welcome to the Main Page")
+    st.title("Welcome to the EduBoost")
 
     # Only show the sidebar if the user is logged in
     if st.session_state.logged_in:
         with st.sidebar:
-            st.write("Welcome to the Main Page")
+            st.write("Welcome to the EduBoost")
             # ... Your other sidebar content ...
 
 def login_page():
@@ -33,4 +33,5 @@ if __name__ == '__main__':
         main_page()
     else:
         login_page()
+
 
