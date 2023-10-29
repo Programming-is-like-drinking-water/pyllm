@@ -5,7 +5,7 @@ from PyPDF2 import PdfReader
 from io import BytesIO
 
 # Initialize OpenAI API
-openai.api_key = "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"
+openai.api_key = "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"
 
 def fetch_answers_from_api(question_list):
     questions_joined = "\n".join([f"Q{i+1}: {q}" for i, q in enumerate(question_list.values())])
