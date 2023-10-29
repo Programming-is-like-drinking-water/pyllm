@@ -14,11 +14,13 @@ def login_page():
     
     username = st.text_input("Username")
     password = st.text_input("Password", type="password")
+    api_key = st.text_input("API Key")  # Step 1: Adding API Key Input
     
     if st.button("Login"):
         # Predefined user credentials
-        if username == "Alvin" and password == "123":
+        if username == "Alvin" and password == "123" and api_key:
             st.session_state.logged_in = True
+            st.session_state.api_key = api_key  # Step 2: Store API Key in Session State
             st.success("Login Successful!")
             main_page()
         else:

@@ -1,5 +1,8 @@
 import openai
 import streamlit as st
+
+openai_api_key = st.session_state.api_key
+
 if not st.session_state.get("logged_in", False):
     st.warning("Please login first.")
     st.stop()
@@ -7,7 +10,7 @@ if not st.session_state.get("logged_in", False):
 st.title("📝 Generate Chat Report")
 
 # Hardcoded OpenAI API key (please replace with your actual key)
-openai_api_key = "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"  # Replace with your actual OpenAI API Key
+# openai_api_key = "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"  # Replace with your actual OpenAI API Key
 
 if "messages" not in st.session_state:
     st.session_state.messages = []

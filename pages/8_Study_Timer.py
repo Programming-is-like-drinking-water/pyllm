@@ -38,4 +38,8 @@ def timer_page():
             st.session_state.start_time = None
             st.session_state.end_time = None
 
+    # Display "Refresh" button and handle logic
+    if st.button("Refresh"):
+        st.experimental_rerun()
+
 timer_page()
