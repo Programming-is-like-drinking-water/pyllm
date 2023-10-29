@@ -5,17 +5,21 @@ from langchain.callbacks import StreamlitCallbackHandler
 from langchain.chat_models import ChatOpenAI
 from langchain.tools import DuckDuckGoSearchRun
 
-openai_api_key = st.session_state.api_key
+if 'api_key' not in st.session_state:
+    st.session_state.api_key = None
+if 'api_key' in st.session_state:
+    openai_api_key = st.session_state.api_key
+try:
+    openai_api_key = st.session_state.api_key
+except KeyError:
+    st.warning("API key not initialized.")
+
+
+# openai_api_key = st.session_state.api_key
 
 if not st.session_state.get("logged_in", False):
     st.warning("Please login first.")
     st.stop()
-
-# with st.sidebar:
-#     openai_api_key = st.text_input("OpenAI API Key", key="langchain_search_api_key_openai", type="password")
-#     "[Get an OpenAI API key](https://platform.openai.com/account/api-keys)"
-#     "[View the source code](https://github.com/streamlit/llm-examples/blob/main/pages/2_Chat_with_search.py)"
-#     "[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/streamlit/llm-examples?quickstart=1)"
 
 st.title("🔎 Related Resource Search")
 

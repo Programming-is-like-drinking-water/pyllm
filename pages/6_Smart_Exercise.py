@@ -2,15 +2,16 @@ import streamlit as st
 import openai
 from difflib import SequenceMatcher
 
-openai.api_key = st.session_state.api_key
-# import os
-# os.environ["API_KEY"] = st.session_state.api_key
+if 'api_key' not in st.session_state:
+    st.session_state.api_key = None
+if 'api_key' in st.session_state:
+    openai.api_key = st.session_state.api_key
+try:
+    openai.api_key = st.session_state.api_key
+except KeyError:
+    st.warning("API key not initialized.")
 
-# from config import API_KEY
-
-# openai.api_key = API_KEY
-# Initialize OpenAI API key
-# openai.api_key = "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"
+# openai.api_key = st.session_state.api_key
 
 # Initialize Streamlit app
 st.title("Smart Exercise Bank with Auto-Grading and Feedback")

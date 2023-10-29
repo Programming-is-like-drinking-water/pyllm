@@ -1,7 +1,15 @@
 import streamlit as st
 from langchain.llms import OpenAI
 
-openai_api_key = st.session_state.api_key
+if 'api_key' not in st.session_state:
+    st.session_state.api_key = None
+if 'api_key' in st.session_state:
+    openai_api_key = st.session_state.api_key
+try:
+    openai_api_key = st.session_state.api_key
+except KeyError:
+    st.warning("API key not initialized.")
+# openai_api_key = st.session_state.api_key
 
 if not st.session_state.get("logged_in", False):
     st.warning("Please login first.")

@@ -4,17 +4,16 @@ import re
 from PyPDF2 import PdfReader
 from io import BytesIO
 
-openai.api_key = st.session_state.api_key
-# from config import API_KEY
+if 'api_key' not in st.session_state:
+    st.session_state.api_key = None
+if 'api_key' in st.session_state:
+    openai.api_key = st.session_state.api_key
+try:
+    openai.api_key = st.session_state.api_key
+except KeyError:
+    st.warning("API key not initialized.")
 
-# openai.api_key = API_KEY
-# Initialize OpenAI API
-# openai.api_key = "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"
-# with st.sidebar:
-#     openai_api_key = st.text_input("OpenAI API Key", key="langchain_search_api_key_openai", type="password")
-#     "[Get an OpenAI API key](https://platform.openai.com/account/api-keys)"
-#     "[View the source code](https://github.com/streamlit/llm-examples/blob/main/pages/2_Chat_with_search.py)"
-#     "[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/streamlit/llm-examples?quickstart=1)"
+# openai.api_key = st.session_state.api_key
 
 def analyze_student_performance(text):
     # text follows a certain pattern "Subject: Grade"
