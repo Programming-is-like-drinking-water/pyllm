@@ -1,10 +1,14 @@
 # 💡EDUBOOST
 
-### 🎈 Streamlit + LLM
+🎈 Streamlit + LLM
 
 ## Github Link
 
 https://github.com/Programming-is-like-drinking-water/pyllm.git
+
+## View Online
+
+https://eduboost.streamlit.app
 
 ## Overview of the App
 
@@ -26,11 +30,11 @@ EDUBOOST include:
 - ✨Please refer to the template doc format for uploading files.
 
 Now you can browse the website:
-https://eduboost.streamlit.app
+- https://eduboost.streamlit.app
 
 At present, you can use the following test account and your own OpenAI API key to experience:
-username : Alvin
-password : 123
+- username : Alvin
+- password : 123
 
 ### Get an OpenAI API key
 
@@ -43,11 +47,11 @@ You can get your own OpenAI API key by following the following instructions:
 ### Jira Link
 
 This project is managed using Jira:
-https://eduboost6.atlassian.net/jira/software/projects/EL/boards/2/timeline?selectedIssue=EL-11
+- https://eduboost6.atlassian.net/jira/software/projects/EL/boards/2/timeline?selectedIssue=EL-11
 
 ## Run it locally
 
-virtualenv .venv
-source .venv/bin/activate
-pip install -r requirements.txt
-streamlit run Login.py
+- virtualenv .venv
+- source .venv/bin/activate
+- pip install -r requirements.txt
+- streamlit run Login.py
