@@ -23,7 +23,7 @@ EDUBOOST include:
 - 🔗 Personalize Learning Plan
 - 📝 Generate Chat Report
 - 📝 Smart Exercise Bank with Auto-Grading and Feedback
-- 📝 Social_Platfrom
+- 📝 Social Platfrom
 - 📝 Study Timer
 - 📝 Forecasting Learning Trend
 - 📝 Study Group Feature
