@@ -1,5 +1,9 @@
 # 🎈 Streamlit + LLM
 
+## Github Link
+
+https://github.com/Programming-is-like-drinking-water/pyllm.git
+
 ## Overview of the App
 
 This app showcases a EDU WEB of LLM.
@@ -33,6 +37,11 @@ You can get your own OpenAI API key by following the following instructions:
 1. Go to https://platform.openai.com/account/api-keys.
 2. Click on the `+ Create new secret key` button.
 3. Next, enter an identifier name (optional) and click on the `Create secret key` button.
+
+### Jira Link
+
+This project is managed using Jira:
+https://eduboost6.atlassian.net/jira/software/projects/EL/boards/2/timeline?selectedIssue=EL-11
 
 ## Run it locally
 
