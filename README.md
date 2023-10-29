@@ -1,4 +1,6 @@
-# 🎈 Streamlit + LLM
+# 💡EDUBOOST
+
+### 🎈 Streamlit + LLM
 
 ## Github Link
 
