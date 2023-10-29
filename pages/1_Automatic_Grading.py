@@ -12,7 +12,12 @@ try:
     openai.api_key = st.session_state.api_key
 except KeyError:
     st.warning("API key not initialized.")
-# openai.api_key = st.session_state.api_key
+
+if not st.session_state.get("logged_in", False):
+    st.warning("Please login first.")
+    st.stop()
+
+st.title("🥇 Automatic Grading")
 
 def fetch_answers_from_api(question_list):
     questions_joined = "\n".join([f"Q{i+1}: {q}" for i, q in enumerate(question_list.values())])

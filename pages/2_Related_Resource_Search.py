@@ -14,9 +14,6 @@ try:
 except KeyError:
     st.warning("API key not initialized.")
 
-
-# openai_api_key = st.session_state.api_key
-
 if not st.session_state.get("logged_in", False):
     st.warning("Please login first.")
     st.stop()

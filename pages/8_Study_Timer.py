@@ -1,8 +1,12 @@
 import streamlit as st
 import time
 
+if not st.session_state.get("logged_in", False):
+    st.warning("Please login first.")
+    st.stop()
+
 def timer_page():
-    st.title("Study Timer")
+    st.title("📝 Study Timer")
 
     # Check if the timer has started
     if "start_time" not in st.session_state:

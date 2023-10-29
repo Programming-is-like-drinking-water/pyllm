@@ -11,10 +11,11 @@ try:
 except KeyError:
     st.warning("API key not initialized.")
 
-# openai.api_key = st.session_state.api_key
+if not st.session_state.get("logged_in", False):
+    st.warning("Please login first.")
+    st.stop()
 
-# Initialize Streamlit app
-st.title("Smart Exercise Bank with Auto-Grading and Feedback")
+st.title("📝 Smart Exercise Bank with Auto-Grading and Feedback")
 
 # Initialize session state
 if "questions" not in st.session_state:

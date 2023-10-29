@@ -17,7 +17,7 @@ if 'announcements' not in st.session_state:
 
 # Sidebar for creating and joining study groups and roles assignment
 with st.sidebar:
-    st.title("Study Group Feature")
+    st.title("📝 Study Group Feature")
     
     # Input for user's name
     st.session_state.username = st.text_input("Your Name", st.session_state.username)

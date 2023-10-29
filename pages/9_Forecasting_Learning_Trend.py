@@ -13,7 +13,11 @@ try:
 except KeyError:
     st.warning("API key not initialized.")
 
-# openai.api_key = st.session_state.api_key
+if not st.session_state.get("logged_in", False):
+    st.warning("Please login first.")
+    st.stop()
+
+st.title("📝 Forecasting Learning Trend")
 
 def analyze_student_performance(text):
     # text follows a certain pattern "Subject: Grade"
@@ -23,7 +27,7 @@ def analyze_student_performance(text):
     prompt = f"Based on the grade report of the student in the following subjects:\n"
     prompt += "\n".join([f"{subject}: {grade}" for subject, grade in subjects.items()])
     prompt += "\nPlease analyze the student's academic performance, give recommendations, and predict future impacts. Also, write a plan for improving the corresponding subject."
-    # prompt += "\nPlease analyze the student's academic performance and predict future impacts."
+
     response = openai.Completion.create(
         engine="text-davinci-002",
         prompt=prompt,

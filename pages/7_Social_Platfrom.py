@@ -6,6 +6,8 @@ if not st.session_state.get("logged_in", False):
     st.warning("Please login first.")
     st.stop()
 
+st.title("📝 Social Platfrom")
+
 # Simulating a database using lists (just for demonstration purposes)
 posts = st.session_state.get("posts", [])
 timestamps = st.session_state.get("timestamps", [])

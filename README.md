@@ -2,17 +2,29 @@
 
 ## Overview of the App
 
-This app showcases a growing collection of LLM.
+This app showcases a EDU WEB of LLM.
 
-Current examples include:
+EDUBOOST include:
 
 - Login
-- File Q&A
+- 🥇 Automatic Grading
 - 🔎 Related Resource Search
 - 🦜 Problem Quick-Solved
 - 🔗 Personalize Learning Plan
-- 📝 Chat with feedback
-- 📝Social_Platfrom
+- 📝 Generate Chat Report
+- 📝 Smart Exercise Bank with Auto-Grading and Feedback
+- 📝 Social_Platfrom
+- 📝 Study Timer
+- 📝 Forecasting Learning Trend
+- 📝 Study Group Feature
+- ✨Please refer to the template doc format for uploading files.
+
+Now you can browse the website:
+https://eduboost.streamlit.app
+
+At present, you can use the following test account and your own OpenAI API key to experience:
+username : Alvin
+password : 123
 
 ### Get an OpenAI API key
 
@@ -21,17 +33,6 @@ You can get your own OpenAI API key by following the following instructions:
 1. Go to https://platform.openai.com/account/api-keys.
 2. Click on the `+ Create new secret key` button.
 3. Next, enter an identifier name (optional) and click on the `Create secret key` button.
-
-### Enter the OpenAI API key in Streamlit Community Cloud
-
-To set the OpenAI API key as an environment variable in Streamlit apps, do the following:
-
-1. At the lower right corner, click on `< Manage app` then click on the vertical "..." followed by clicking on `Settings`.
-2. This brings the **App settings**, next click on the `Secrets` tab and paste the API key into the text box as follows:
-
-```
-OPENAI_API_KEY='xxxxxxxxxx'
-```
 
 ## Run it locally
 

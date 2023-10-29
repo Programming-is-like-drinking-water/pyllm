@@ -9,7 +9,6 @@ try:
     openai_api_key = st.session_state.api_key
 except KeyError:
     st.warning("API key not initialized.")
-# openai_api_key = st.session_state.api_key
 
 if not st.session_state.get("logged_in", False):
     st.warning("Please login first.")
@@ -17,15 +16,9 @@ if not st.session_state.get("logged_in", False):
 
 st.title("🦜 Problem Quick-Solved")
 
-# with st.sidebar:
-#     openai_api_key = st.text_input("OpenAI API Key", type="password")
-#     "[Get an OpenAI API key](https://platform.openai.com/account/api-keys)"
-
-
 def generate_response(input_text):
     llm = OpenAI(temperature=0.7, openai_api_key=openai_api_key)
     st.info(llm(input_text))
-
 
 with st.form("my_form"):
     text = st.text_area("Enter text:", "What problems do you need to solve?")
